@@ -5,7 +5,7 @@
 */
 
 /* SONY BEGIN */
-/* JIML-299432 - According to ORM, local ecc shall be set up as normal call */
+/* JIMPT1-26336 - According to ORM, local ecc shall be set up as normal call */
 /*
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('208','02','15','','');
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('208','02','17','','');
@@ -29,7 +29,6 @@ INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('208','91','196','','');
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('208','91','197','','');
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('208','91','116000','','');
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('208','91','116117','','');
-
 
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('208','21','15','','');
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('208','21','17','','');
@@ -97,6 +96,17 @@ INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('208','13','197','','');
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('208','13','116000','','');
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('208','13','116117','','');
 
+INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','01','15','','');
+INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','01','17','','');
+INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','01','18','','');
+INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','01','115','','');
+INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','01','119','','');
+INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','01','191','','');
+INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','01','196','','');
+INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','01','197','','');
+INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','01','116000','','');
+INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','01','116117','','');
+
 INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','02','15','','');
 INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','02','17','','');
 INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','02','18','','');
@@ -120,6 +130,17 @@ INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','91','197','
 INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','91','116000','','');
 INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','91','116117','','');
 
+
+INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','20','15','','');
+INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','20','17','','');
+INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','20','18','','');
+INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','20','115','','');
+INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','20','119','','');
+INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','20','191','','');
+INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','20','196','','');
+INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','20','197','','');
+INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','20','116000','','');
+INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','20','116117','','');
 
 INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','21','15','','');
 INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','21','17','','');
@@ -186,6 +207,5 @@ INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','13','196','
 INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','13','197','','');
 INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','13','116000','','');
 INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','13','116117','','');
-
 */
 /* SONY END */

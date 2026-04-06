@@ -834,6 +834,62 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.soter@1.0-impl",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/hw/vendor.qti.hardware.soter@1.0-impl.so",
+            ],
+            shared_libs: [
+                "libhwbinder",
+                "libhidlbase",
+                "libhidltransport",
+                "libutils",
+                "libcutils",
+                "libcrypto",
+                "libbase",
+                "liblog",
+                "vendor.qti.hardware.soter@1.0",
+                "libQSEEComAPI",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so",
+            ],
+            shared_libs: [
+                "libhwbinder",
+                "libhidlbase",
+                "libhidltransport",
+                "libutils",
+                "libcutils",
+                "libcrypto",
+                "libbase",
+                "liblog",
+                "vendor.qti.hardware.soter@1.0",
+                "libQSEEComAPI",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vulkan.adreno",
     owner: "sony",
     strip: {
@@ -899,6 +955,53 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "both",
     relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "jcos_client",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/jcos_client.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libchrome",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/jcos_client.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libchrome",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
     prefer: true,
     soc_specific: true,
 }
@@ -1296,6 +1399,319 @@ cc_prebuilt_library_shared {
                 "libc++_shared",
                 "libc",
                 "libm",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libTrustedInput",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libTrustedInput.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libhidlbase",
+                "libbinder",
+                "libutils",
+                "libcutils",
+                "vendor.qti.hardware.trustedui@1.0",
+                "vendor.qti.hardware.trustedui@1.1",
+                "vendor.qti.hardware.trustedui@1.2",
+                "vendor.qti.hardware.systemhelper@1.0",
+                "libTrustedInputTZ",
+                "libTouchInputVM",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libTrustedInput.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libhidlbase",
+                "libbinder",
+                "libutils",
+                "libcutils",
+                "vendor.qti.hardware.trustedui@1.0",
+                "vendor.qti.hardware.trustedui@1.1",
+                "vendor.qti.hardware.trustedui@1.2",
+                "vendor.qti.hardware.systemhelper@1.0",
+                "libTrustedInputTZ",
+                "libTouchInputVM",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libTrustedInputTZ",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libTrustedInputTZ.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libhidlbase",
+                "libbinder",
+                "libutils",
+                "libcutils",
+                "libbase",
+                "vendor.qti.hardware.trustedui@1.0",
+                "vendor.qti.hardware.trustedui@1.1",
+                "vendor.qti.hardware.trustedui@1.2",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libTrustedInputTZ.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libhidlbase",
+                "libbinder",
+                "libutils",
+                "libcutils",
+                "libbase",
+                "vendor.qti.hardware.trustedui@1.0",
+                "vendor.qti.hardware.trustedui@1.1",
+                "vendor.qti.hardware.trustedui@1.2",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libTrustedUI",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libTrustedUI.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "libbinder",
+                "libutils",
+                "libcutils",
+                "vendor.qti.hardware.trustedui@1.0",
+                "vendor.qti.hardware.trustedui@1.1",
+                "vendor.qti.hardware.trustedui@1.2",
+                "vendor.qti.hardware.systemhelper@1.0",
+                "libhidlmemory",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libTrustedUI.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "libbinder",
+                "libutils",
+                "libcutils",
+                "vendor.qti.hardware.trustedui@1.0",
+                "vendor.qti.hardware.trustedui@1.1",
+                "vendor.qti.hardware.trustedui@1.2",
+                "vendor.qti.hardware.systemhelper@1.0",
+                "libhidlmemory",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libTrustedUITZ",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libTrustedUITZ.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libhidlbase",
+                "libbinder",
+                "libutils",
+                "libcutils",
+                "libbase",
+                "libion",
+                "libsi",
+                "libQSEEComAPI",
+                "vendor.qti.hardware.trustedui@1.0",
+                "vendor.qti.hardware.trustedui@1.1",
+                "vendor.qti.hardware.trustedui@1.2",
+                "vendor.qti.hardware.systemhelper@1.0",
+                "vendor.display.config@1.0",
+                "libdisplayconfig.qti",
+                "libtrustedapploader",
+                "libhidlmemory",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libTrustedUITZ.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libhidlbase",
+                "libbinder",
+                "libutils",
+                "libcutils",
+                "libbase",
+                "libion",
+                "libsi",
+                "libQSEEComAPI",
+                "vendor.qti.hardware.trustedui@1.0",
+                "vendor.qti.hardware.trustedui@1.1",
+                "vendor.qti.hardware.trustedui@1.2",
+                "vendor.qti.hardware.systemhelper@1.0",
+                "vendor.display.config@1.0",
+                "libdisplayconfig.qti",
+                "libtrustedapploader",
+                "libhidlmemory",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libTrustedUIVM",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libTrustedUIVM.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "libbinder",
+                "libutils",
+                "libcutils",
+                "libbase",
+                "libminksocket",
+                "libion",
+                "vendor.qti.hardware.trustedui@1.0",
+                "vendor.qti.hardware.trustedui@1.1",
+                "vendor.qti.hardware.trustedui@1.2",
+                "vendor.qti.hardware.systemhelper@1.0",
+                "libdisplayconfig.qti",
+                "libtrustedapploader",
+                "libminkdescriptor",
+                "libhidlmemory",
+                "android.hidl.allocator@1.0",
+                "libcpion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libTrustedUIVM.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "libbinder",
+                "libutils",
+                "libcutils",
+                "libbase",
+                "libminksocket",
+                "libion",
+                "vendor.qti.hardware.trustedui@1.0",
+                "vendor.qti.hardware.trustedui@1.1",
+                "vendor.qti.hardware.trustedui@1.2",
+                "vendor.qti.hardware.systemhelper@1.0",
+                "libdisplayconfig.qti",
+                "libtrustedapploader",
+                "libminkdescriptor",
+                "libhidlmemory",
+                "android.hidl.allocator@1.0",
+                "libcpion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
@@ -2327,6 +2743,45 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libcpion",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libcpion.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcpion.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libdapparamstorage",
     owner: "sony",
     strip: {
@@ -2439,6 +2894,49 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libcutils",
                 "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdisplayconfig.qti",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libdisplayconfig.qti.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libhidlbase",
+                "libutils",
+                "vendor.display.config@2.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libdisplayconfig.qti.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libhidlbase",
+                "libutils",
+                "vendor.display.config@2.0",
+                "libc++",
+                "libc",
                 "libm",
                 "libdl",
             ],
@@ -2916,6 +3414,45 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libion",
                 "libsuntory",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libhdcpsrm",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libhdcpsrm.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libQSEEComAPI",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libhdcpsrm.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libQSEEComAPI",
                 "libc++",
                 "libc",
                 "libm",
@@ -3955,20 +4492,6 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libqcbor.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/libqcbor.so",
@@ -3984,7 +4507,7 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "both",
+    compile_multilib: "64",
     prefer: true,
     soc_specific: true,
 }
@@ -4607,17 +5130,6 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libqrtr.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/libqrtr.so",
@@ -4630,7 +5142,7 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "both",
+    compile_multilib: "64",
     prefer: true,
     soc_specific: true,
 }
@@ -5310,6 +5822,49 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libtrustedapploader",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libtrustedapploader.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libminkdescriptor",
+                "libminksocket",
+                "libqcbor",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libtrustedapploader.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libminkdescriptor",
+                "libminksocket",
+                "libqcbor",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libtzdrmgenprov",
     owner: "sony",
     strip: {
@@ -5716,6 +6271,53 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "both",
     relative_install_path: "mediadrm",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "se_extn_client",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/se_extn_client.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libchrome",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/se_extn_client.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libchrome",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
     prefer: true,
     soc_specific: true,
 }
@@ -6361,6 +6963,49 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.fingerprint@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/vendor.qti.hardware.fingerprint@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.fm@1.0_vendor",
     stem: "vendor.qti.hardware.fm@1.0",
     owner: "sony",
@@ -6560,6 +7205,149 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.soter@1.0.so",
             ],
             shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.trustedui@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/vendor.qti.hardware.trustedui@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.trustedui@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.trustedui@1.1",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/vendor.qti.hardware.trustedui@1.1.so",
+            ],
+            shared_libs: [
+                "android.hidl.memory.block@1.0",
+                "android.hidl.memory.token@1.0",
+                "vendor.qti.hardware.trustedui@1.0",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.trustedui@1.1.so",
+            ],
+            shared_libs: [
+                "android.hidl.memory.block@1.0",
+                "android.hidl.memory.token@1.0",
+                "vendor.qti.hardware.trustedui@1.0",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.trustedui@1.2",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/vendor.qti.hardware.trustedui@1.2.so",
+            ],
+            shared_libs: [
+                "android.hidl.memory.block@1.0",
+                "android.hidl.memory.token@1.0",
+                "vendor.qti.hardware.trustedui@1.0",
+                "vendor.qti.hardware.trustedui@1.1",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.trustedui@1.2.so",
+            ],
+            shared_libs: [
+                "android.hidl.memory.block@1.0",
+                "android.hidl.memory.token@1.0",
+                "vendor.qti.hardware.trustedui@1.0",
+                "vendor.qti.hardware.trustedui@1.1",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -14555,8 +15343,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.imscmservice@1.0_vendor",
-    stem: "com.qualcomm.qti.imscmservice@1.0",
+    name: "com.qualcomm.qti.imscmservice@1.0",
     owner: "sony",
     strip: {
         none: true,
@@ -14584,8 +15371,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.imscmservice@2.0_vendor",
-    stem: "com.qualcomm.qti.imscmservice@2.0",
+    name: "com.qualcomm.qti.imscmservice@2.0",
     owner: "sony",
     strip: {
         none: true,
@@ -14613,8 +15399,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.imscmservice@2.1_vendor",
-    stem: "com.qualcomm.qti.imscmservice@2.1",
+    name: "com.qualcomm.qti.imscmservice@2.1",
     owner: "sony",
     strip: {
         none: true,
@@ -14625,7 +15410,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so",
             ],
             shared_libs: [
-                "com.qualcomm.qti.imscmservice@2.0_vendor",
+                "com.qualcomm.qti.imscmservice@2.0",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -14643,8 +15428,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.imscmservice@2.2_vendor",
-    stem: "com.qualcomm.qti.imscmservice@2.2",
+    name: "com.qualcomm.qti.imscmservice@2.2",
     owner: "sony",
     strip: {
         none: true,
@@ -14655,8 +15439,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/com.qualcomm.qti.imscmservice@2.2.so",
             ],
             shared_libs: [
-                "com.qualcomm.qti.imscmservice@2.0_vendor",
-                "com.qualcomm.qti.imscmservice@2.1_vendor",
+                "com.qualcomm.qti.imscmservice@2.0",
+                "com.qualcomm.qti.imscmservice@2.1",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -14729,8 +15513,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.uceservice@2.0_vendor",
-    stem: "com.qualcomm.qti.uceservice@2.0",
+    name: "com.qualcomm.qti.uceservice@2.0",
     owner: "sony",
     strip: {
         none: true,
@@ -14758,8 +15541,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.uceservice@2.1_vendor",
-    stem: "com.qualcomm.qti.uceservice@2.1",
+    name: "com.qualcomm.qti.uceservice@2.1",
     owner: "sony",
     strip: {
         none: true,
@@ -14770,7 +15552,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/com.qualcomm.qti.uceservice@2.1.so",
             ],
             shared_libs: [
-                "com.qualcomm.qti.uceservice@2.0_vendor",
+                "com.qualcomm.qti.uceservice@2.0",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -14799,8 +15581,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/com.qualcomm.qti.uceservice@2.2.so",
             ],
             shared_libs: [
-                "com.qualcomm.qti.uceservice@2.0_vendor",
-                "com.qualcomm.qti.uceservice@2.1_vendor",
+                "com.qualcomm.qti.uceservice@2.0",
+                "com.qualcomm.qti.uceservice@2.1",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -14829,8 +15611,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/com.qualcomm.qti.uceservice@2.3.so",
             ],
             shared_libs: [
-                "com.qualcomm.qti.uceservice@2.0_vendor",
-                "com.qualcomm.qti.uceservice@2.1_vendor",
+                "com.qualcomm.qti.uceservice@2.0",
+                "com.qualcomm.qti.uceservice@2.1",
                 "com.qualcomm.qti.uceservice@2.2",
                 "libhidlbase",
                 "liblog",
@@ -15298,41 +16080,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.soter@1.0-impl",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so",
-            ],
-            shared_libs: [
-                "libhwbinder",
-                "libhidlbase",
-                "libhidltransport",
-                "libutils",
-                "libcutils",
-                "libcrypto",
-                "libbase",
-                "liblog",
-                "vendor.qti.hardware.soter@1.0",
-                "libQSEEComAPI",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "lib-imscommon",
     owner: "sony",
     strip: {
@@ -15362,6 +16109,11 @@ cc_prebuilt_library_shared {
                 "libcneapiclient",
                 "vendor.qti.ims.factory@1.0",
                 "vendor.qti.ims.factory@1.1",
+                "vendor.qti.ims.factory@2.0",
+                "vendor.qti.ims.factory@2.1",
+                "vendor.qti.ims.factory@2.2",
+                "libnetutils",
+                "libz",
                 "libc++",
                 "libc",
                 "libm",
@@ -15463,13 +16215,23 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libqmiservices",
                 "libqmi_encdec",
-                "com.qualcomm.qti.uceservice@2.0_vendor",
-                "com.qualcomm.qti.uceservice@2.1_vendor",
+                "com.qualcomm.qti.uceservice@2.0",
+                "com.qualcomm.qti.uceservice@2.1",
                 "com.qualcomm.qti.uceservice@2.2",
                 "com.qualcomm.qti.uceservice@2.3",
-                "com.qualcomm.qti.imscmservice@2.0_vendor",
-                "com.qualcomm.qti.imscmservice@2.1_vendor",
-                "com.qualcomm.qti.imscmservice@2.2_vendor",
+                "com.qualcomm.qti.imscmservice@2.0",
+                "com.qualcomm.qti.imscmservice@2.1",
+                "com.qualcomm.qti.imscmservice@2.2",
+                "vendor.qti.ims.rcssip@1.0",
+                "vendor.qti.ims.connection@1.0",
+                "vendor.qti.ims.factory@2.0",
+                "vendor.qti.ims.rcsuce@1.0",
+                "vendor.qti.ims.factory@2.1",
+                "vendor.qti.ims.rcsuce@1.1",
+                "vendor.qti.ims.rcssip@1.1",
+                "vendor.qti.ims.factory@2.2",
+                "vendor.qti.ims.rcsuce@1.2",
+                "vendor.qti.ims.rcssip@1.2",
                 "libc++",
                 "libc",
                 "libm",
@@ -15507,12 +16269,17 @@ cc_prebuilt_library_shared {
                 "libidl",
                 "libqti_vndfwk_detect",
                 "libandroid_net",
-                "vendor.qti.ims.callinfo@1.0_vendor",
+                "vendor.qti.ims.callinfo@1.0",
                 "vendor.qti.ims.rcsconfig@2.0",
                 "vendor.qti.ims.rcsconfig@2.1",
                 "vendor.qti.ims.factory@1.0",
                 "vendor.qti.ims.factory@1.1",
                 "vendor.qti.ims.callcapability@1.0",
+                "vendor.qti.ims.configservice@1.0",
+                "vendor.qti.ims.factory@2.0",
+                "vendor.qti.ims.factory@2.1",
+                "vendor.qti.ims.factory@2.2",
+                "vendor.qti.ims.configservice@1.1",
                 "libc++",
                 "libc",
                 "libm",
@@ -17177,32 +17944,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcpion",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libcpion.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libion",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libcvp2_1",
     owner: "sony",
     strip: {
@@ -17909,32 +18650,6 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "liblog",
                 "libprocessgroup",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libhdcpsrm",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libhdcpsrm.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libQSEEComAPI",
                 "libc++",
                 "libc",
                 "libm",
@@ -20110,6 +20825,7 @@ cc_prebuilt_library_shared {
                 "vendor.qti.hardware.radio.qtiradio@2.4",
                 "vendor.qti.hardware.radio.qtiradio@2.5",
                 "vendor.qti.hardware.radio.qtiradio@2.6",
+                "vendor.qti.hardware.radio.qtiradio@2.7",
                 "android.hardware.radio@1.0",
                 "android.hardware.radio.config@1.0",
                 "android.hardware.radio.config@1.1",
@@ -20158,7 +20874,6 @@ cc_prebuilt_library_shared {
                 "qcrilMarshal",
                 "libril-db",
                 "vendor.somc.hardware.radio@1.0",
-                "libmiscta",
                 "libsystem_health_mon",
                 "libpdmapper",
                 "libpdnotifier",
@@ -20166,10 +20881,10 @@ cc_prebuilt_library_shared {
                 "libdsi_netctrl",
                 "libqdp",
                 "liblqe",
-                "vendor.qti.hardware.data.iwlan@1.0_vendor",
-                "vendor.qti.hardware.data.connection@1.0_vendor",
-                "vendor.qti.hardware.data.connection@1.1_vendor",
-                "libdevice_security_vendor",
+                "vendor.qti.hardware.data.iwlan@1.0",
+                "vendor.qti.hardware.data.connection@1.0",
+                "vendor.qti.hardware.data.connection@1.1",
+                "libspc_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -20335,6 +21050,41 @@ cc_prebuilt_library_shared {
                 "libsdm-color",
                 "libbinder",
                 "libtinyxml2_1",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqcrildataqos",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqcrildataqos.so",
+            ],
+            shared_libs: [
+                "libqcrilNrFramework",
+                "libqcrilNrLogger",
+                "libqmi_cci",
+                "libqmiservices",
+                "vendor.qti.ims.factory@2.0",
+                "vendor.qti.ims.connection@1.0",
+                "libhidltransport",
+                "libhidlbase",
+                "libutils",
+                "libidl",
+                "libqcrilNr",
                 "libc++",
                 "libc",
                 "libm",
@@ -23353,6 +24103,35 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libspc_vendor",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libspc_vendor.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libbinder_ndk",
+                "liblog",
+                "libutils",
+                "vendor.semc.hardware.spc-V1-ndk_platform",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libspcom",
     owner: "sony",
     strip: {
@@ -23830,34 +24609,6 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "liblog",
                 "libintegration",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libtrustedapploader",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libtrustedapploader.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libminkdescriptor",
-                "libminksocket",
-                "libqcbor",
                 "libc++",
                 "libc",
                 "libm",
@@ -24559,6 +25310,34 @@ cc_prebuilt_library_shared {
                 "libdapparamstorage",
                 "libdlbdsservice",
                 "vendor.dolby.hardware.dms@2.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.egistec.hardware.fingerprint@4.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.egistec.hardware.fingerprint@4.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -26308,6 +27087,44 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.radio.qtiradio@2.7",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.7.so",
+            ],
+            shared_libs: [
+                "android.hardware.radio@1.0",
+                "android.hidl.safe_union@1.0",
+                "vendor.qti.hardware.radio.qtiradio@1.0",
+                "vendor.qti.hardware.radio.qtiradio@2.0",
+                "vendor.qti.hardware.radio.qtiradio@2.1",
+                "vendor.qti.hardware.radio.qtiradio@2.2",
+                "vendor.qti.hardware.radio.qtiradio@2.3",
+                "vendor.qti.hardware.radio.qtiradio@2.4",
+                "vendor.qti.hardware.radio.qtiradio@2.5",
+                "vendor.qti.hardware.radio.qtiradio@2.6",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.radio.uim@1.0",
     owner: "sony",
     strip: {
@@ -26594,8 +27411,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.callinfo@1.0_vendor",
-    stem: "vendor.qti.ims.callinfo@1.0",
+    name: "vendor.qti.ims.callinfo@1.0",
     owner: "sony",
     strip: {
         none: true,
@@ -26604,6 +27420,91 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/vendor.qti.ims.callinfo@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.ims.configservice@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.ims.configservice@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.ims.configservice@1.1",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.ims.configservice@1.1.so",
+            ],
+            shared_libs: [
+                "vendor.qti.ims.configservice@1.0",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.ims.connection@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.ims.connection@1.0.so",
             ],
             shared_libs: [
                 "libhidlbase",
@@ -26685,8 +27586,117 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcsconfig@1.0_vendor",
-    stem: "vendor.qti.ims.rcsconfig@1.0",
+    name: "vendor.qti.ims.factory@2.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.ims.factory@2.0.so",
+            ],
+            shared_libs: [
+                "vendor.qti.ims.callcapability@1.0",
+                "vendor.qti.ims.configservice@1.0",
+                "vendor.qti.ims.connection@1.0",
+                "vendor.qti.ims.rcssip@1.0",
+                "vendor.qti.ims.rcsuce@1.0",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.ims.factory@2.1",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.ims.factory@2.1.so",
+            ],
+            shared_libs: [
+                "vendor.qti.ims.callcapability@1.0",
+                "vendor.qti.ims.configservice@1.0",
+                "vendor.qti.ims.configservice@1.1",
+                "vendor.qti.ims.connection@1.0",
+                "vendor.qti.ims.factory@2.0",
+                "vendor.qti.ims.rcssip@1.0",
+                "vendor.qti.ims.rcssip@1.1",
+                "vendor.qti.ims.rcsuce@1.0",
+                "vendor.qti.ims.rcsuce@1.1",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.ims.factory@2.2",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.ims.factory@2.2.so",
+            ],
+            shared_libs: [
+                "vendor.qti.ims.callcapability@1.0",
+                "vendor.qti.ims.configservice@1.0",
+                "vendor.qti.ims.configservice@1.1",
+                "vendor.qti.ims.connection@1.0",
+                "vendor.qti.ims.factory@2.0",
+                "vendor.qti.ims.factory@2.1",
+                "vendor.qti.ims.rcssip@1.0",
+                "vendor.qti.ims.rcssip@1.1",
+                "vendor.qti.ims.rcssip@1.2",
+                "vendor.qti.ims.rcsuce@1.0",
+                "vendor.qti.ims.rcsuce@1.1",
+                "vendor.qti.ims.rcsuce@1.2",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.ims.rcsconfig@1.0",
     owner: "sony",
     strip: {
         none: true,
@@ -26714,8 +27724,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcsconfig@1.1_vendor",
-    stem: "vendor.qti.ims.rcsconfig@1.1",
+    name: "vendor.qti.ims.rcsconfig@1.1",
     owner: "sony",
     strip: {
         none: true,
@@ -26726,7 +27735,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so",
             ],
             shared_libs: [
-                "vendor.qti.ims.rcsconfig@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@1.0",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -26798,6 +27807,206 @@ cc_prebuilt_library_shared {
     compile_multilib: "64",
     prefer: true,
     soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.ims.rcssip@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.ims.rcssip@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.ims.rcssip@1.1",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.ims.rcssip@1.1.so",
+            ],
+            shared_libs: [
+                "vendor.qti.ims.rcssip@1.0",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.ims.rcssip@1.2",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.ims.rcssip@1.2.so",
+            ],
+            shared_libs: [
+                "vendor.qti.ims.rcssip@1.0",
+                "vendor.qti.ims.rcssip@1.1",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.ims.rcsuce@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.ims.rcsuce@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.ims.rcsuce@1.1",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.ims.rcsuce@1.1.so",
+            ],
+            shared_libs: [
+                "vendor.qti.ims.rcsuce@1.0",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.ims.rcsuce@1.2",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.ims.rcsuce@1.2.so",
+            ],
+            shared_libs: [
+                "vendor.qti.ims.rcsuce@1.0",
+                "vendor.qti.ims.rcsuce@1.1",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.ImsRtpService-V1-ndk",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "android.hardware.common-V2-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -26964,6 +28173,31 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "android.hardware.light-V1-ndk",
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.semc.hardware.spc-V1-ndk_platform",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.semc.hardware.spc-V1-ndk_platform.so",
+            ],
+            shared_libs: [
                 "libbinder_ndk",
                 "libc++",
                 "libc",
@@ -27236,6 +28470,62 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "android.hardware.radio@1.0",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.somc.hardware.ifaa@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.somc.hardware.ifaa@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.somc.hardware.nfc@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.somc.hardware.nfc@1.0.so",
+            ],
+            shared_libs: [
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -27743,9 +29033,9 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm: {
+        android_arm64: {
             srcs: [
-                "proprietary/system_ext/lib/libimsmedia_jni.so",
+                "proprietary/system_ext/lib64/libimsmedia_jni.so",
             ],
             shared_libs: [
                 "libnativehelper",
@@ -27761,18 +29051,45 @@ cc_prebuilt_library_shared {
                 "libdl",
             ],
         },
-        android_arm64: {
+    },
+    compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libifaateeclientjni.sony",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
             srcs: [
-                "proprietary/system_ext/lib64/libimsmedia_jni.so",
+                "proprietary/system_ext/lib/libifaateeclientjni.sony.so",
             ],
             shared_libs: [
-                "libnativehelper",
                 "libcutils",
-                "libutils",
-                "libgui",
-                "libbinder",
                 "liblog",
-                "libandroid",
+                "libutils",
+                "libhidlbase",
+                "vendor.somc.hardware.ifaa@1.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libifaateeclientjni.sony.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libhidlbase",
+                "vendor.somc.hardware.ifaa@1.0",
                 "libc++",
                 "libc",
                 "libm",
@@ -27986,15 +29303,30 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.imscmservice@1.0",
+    name: "vendor.somc.hardware.ifaa@1.0",
     owner: "sony",
     strip: {
         none: true,
     },
     target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system_ext/lib/vendor.somc.hardware.ifaa@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
         android_arm64: {
             srcs: [
-                "proprietary/system_ext/lib64/com.qualcomm.qti.imscmservice@1.0.so",
+                "proprietary/system_ext/lib64/vendor.somc.hardware.ifaa@1.0.so",
             ],
             shared_libs: [
                 "libhidlbase",
@@ -28008,151 +29340,7 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.imscmservice@2.0",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/com.qualcomm.qti.imscmservice@2.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.imscmservice@2.1",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/com.qualcomm.qti.imscmservice@2.1.so",
-            ],
-            shared_libs: [
-                "com.qualcomm.qti.imscmservice@2.0",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.imscmservice@2.2",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/com.qualcomm.qti.imscmservice@2.2.so",
-            ],
-            shared_libs: [
-                "com.qualcomm.qti.imscmservice@2.0",
-                "com.qualcomm.qti.imscmservice@2.1",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.uceservice@2.0",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/com.qualcomm.qti.uceservice@2.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.uceservice@2.1",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/com.qualcomm.qti.uceservice@2.1.so",
-            ],
-            shared_libs: [
-                "com.qualcomm.qti.uceservice@2.0",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
+    compile_multilib: "both",
     prefer: true,
     system_ext_specific: true,
 }
@@ -28356,6 +29544,9 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "vendor.qti.imsrtpservice@3.0",
                 "vendor.qti.imsrtpservice@3.1",
+                "libbinder",
+                "libbinder_ndk",
+                "vendor.qti.ImsRtpService-V1-ndk",
                 "libdiag_system",
                 "libcutils",
                 "libutils",
@@ -28452,6 +29643,8 @@ cc_prebuilt_library_shared {
                 "libhidlmemory",
                 "libc",
                 "libcutils",
+                "libbinder_ndk",
+                "vendor.qti.diaghal-V1-ndk",
                 "libc++",
                 "libm",
                 "libdl",
@@ -29561,6 +30754,31 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.dpmaidlservice-V1-ndk",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/vendor.qti.hardware.dpmaidlservice-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.dpmservice@1.0",
     owner: "sony",
     strip: {
@@ -29658,91 +30876,6 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libbinder_ndk",
                 "android.hardware.common-V2-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.callinfo@1.0",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.ims.callinfo@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcsconfig@1.0",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.ims.rcsconfig@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcsconfig@1.1",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.ims.rcsconfig@1.1.so",
-            ],
-            shared_libs: [
-                "vendor.qti.ims.rcsconfig@1.0",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -29857,6 +30990,43 @@ android_app_import {
 }
 
 android_app_import {
+    name: "TrustZoneAccessService",
+    owner: "sony",
+    apk: "proprietary/vendor/app/TrustZoneAccessService/TrustZoneAccessService.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    soc_specific: true,
+}
+
+android_app_import {
+    name: "EuiccGoogle",
+    owner: "sony",
+    apk: "proprietary/product/priv-app/EuiccGoogle/EuiccGoogle.apk",
+    preprocessed: true,
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    product_specific: true,
+}
+
+android_app_import {
+    name: "EuiccMemoryReset",
+    owner: "sony",
+    apk: "proprietary/product/priv-app/EuiccMemoryReset/EuiccMemoryReset.apk",
+    preprocessed: true,
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    product_specific: true,
+}
+
+android_app_import {
     name: "HotwordEnrollmentOKGoogleHEXAGON",
     owner: "sony",
     apk: "proprietary/product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk",
@@ -29894,11 +31064,12 @@ android_app_import {
 android_app_import {
     name: "QtiTelephony",
     owner: "sony",
-    apk: "proprietary/system_ext/app/QtiTelephony/QtiTelephony.apk",
+    apk: "proprietary/system_ext/priv-app/QtiTelephony/QtiTelephony.apk",
     certificate: "platform",
     dex_preopt: {
         enabled: false,
     },
+    privileged: true,
     system_ext_specific: true,
 }
 
@@ -29906,28 +31077,6 @@ android_app_import {
     name: "QtiTelephonyService",
     owner: "sony",
     apk: "proprietary/system_ext/app/QtiTelephonyService/QtiTelephonyService.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "embms",
-    owner: "sony",
-    apk: "proprietary/system_ext/app/embms/embms.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "uceShimService",
-    owner: "sony",
-    apk: "proprietary/system_ext/app/uceShimService/uceShimService.apk",
     certificate: "platform",
     dex_preopt: {
         enabled: false,
@@ -29963,6 +31112,9 @@ android_app_import {
     name: "ims",
     owner: "sony",
     apk: "proprietary/system_ext/priv-app/ims/ims.apk",
+    required: [
+        "QtiTelephonyCompat",
+    ],
     certificate: "platform",
     dex_preopt: {
         enabled: false,
@@ -29992,14 +31144,6 @@ dex_import {
 }
 
 dex_import {
-    name: "tcmclient",
-    owner: "sony",
-    jars: [
-        "proprietary/system/framework/tcmclient.jar",
-    ],
-}
-
-dex_import {
     name: "audiosphere",
     owner: "sony",
     jars: [
@@ -30022,51 +31166,6 @@ dex_import {
     owner: "sony",
     jars: [
         "proprietary/system_ext/framework/com.qti.dpmframework.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "com.qualcomm.qti.imscmservice-V2.0-java",
-    owner: "sony",
-    jars: [
-        "proprietary/system_ext/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "com.qualcomm.qti.imscmservice-V2.1-java",
-    owner: "sony",
-    jars: [
-        "proprietary/system_ext/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "com.qualcomm.qti.imscmservice-V2.2-java",
-    owner: "sony",
-    jars: [
-        "proprietary/system_ext/framework/com.qualcomm.qti.imscmservice-V2.2-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "com.qualcomm.qti.uceservice-V2.0-java",
-    owner: "sony",
-    jars: [
-        "proprietary/system_ext/framework/com.qualcomm.qti.uceservice-V2.0-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "com.qualcomm.qti.uceservice-V2.1-java",
-    owner: "sony",
-    jars: [
-        "proprietary/system_ext/framework/com.qualcomm.qti.uceservice-V2.1-java.jar",
     ],
     system_ext_specific: true,
 }
@@ -30117,10 +31216,19 @@ dex_import {
 }
 
 dex_import {
-    name: "embmslibrary",
+    name: "jp.co.sony.mc.misctasdklibrary",
     owner: "sony",
     jars: [
-        "proprietary/system_ext/framework/embmslibrary.jar",
+        "proprietary/system_ext/framework/jp.co.sony.mc.misctasdklibrary.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "org.ifaa.android.manager",
+    owner: "sony",
+    jars: [
+        "proprietary/system_ext/framework/org.ifaa.android.manager.jar",
     ],
     system_ext_specific: true,
 }
@@ -30198,10 +31306,19 @@ dex_import {
 }
 
 dex_import {
-    name: "vendor.qti.ims.callinfo-V1.0-java",
+    name: "vendor.qti.ims.connection-V1.0-java",
     owner: "sony",
     jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.callinfo-V1.0-java.jar",
+        "proprietary/system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "vendor.qti.ims.connectionaidlservice-V1-java",
+    owner: "sony",
+    jars: [
+        "proprietary/system_ext/framework/vendor.qti.ims.connectionaidlservice-V1-java.jar",
     ],
     system_ext_specific: true,
 }
@@ -30216,10 +31333,100 @@ dex_import {
 }
 
 dex_import {
-    name: "vendor.qti.ims.rcsconfig-V1.0-java",
+    name: "vendor.qti.ims.factory-V2.1-java",
     owner: "sony",
     jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar",
+        "proprietary/system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "vendor.qti.ims.factory-V2.2-java",
+    owner: "sony",
+    jars: [
+        "proprietary/system_ext/framework/vendor.qti.ims.factory-V2.2-java.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "vendor.qti.ims.factoryaidlservice-V1-java",
+    owner: "sony",
+    jars: [
+        "proprietary/system_ext/framework/vendor.qti.ims.factoryaidlservice-V1-java.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "vendor.qti.ims.rcssip-V1.0-java",
+    owner: "sony",
+    jars: [
+        "proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "vendor.qti.ims.rcssip-V1.1-java",
+    owner: "sony",
+    jars: [
+        "proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.1-java.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "vendor.qti.ims.rcssip-V1.2-java",
+    owner: "sony",
+    jars: [
+        "proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.2-java.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "vendor.qti.ims.rcssipaidlservice-V1-java",
+    owner: "sony",
+    jars: [
+        "proprietary/system_ext/framework/vendor.qti.ims.rcssipaidlservice-V1-java.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "vendor.qti.ims.rcsuce-V1.0-java",
+    owner: "sony",
+    jars: [
+        "proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "vendor.qti.ims.rcsuce-V1.1-java",
+    owner: "sony",
+    jars: [
+        "proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "vendor.qti.ims.rcsuce-V1.2-java",
+    owner: "sony",
+    jars: [
+        "proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "vendor.qti.ims.rcsuceaidlservice-V1-java",
+    owner: "sony",
+    jars: [
+        "proprietary/system_ext/framework/vendor.qti.ims.rcsuceaidlservice-V1-java.jar",
     ],
     system_ext_specific: true,
 }
@@ -30269,6 +31476,24 @@ prebuilt_etc_xml {
     soc_specific: true,
 }
 
+prebuilt_etc_xml {
+    name: "vendor.semc.system.idd.manifest.xml",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.semc.system.idd.manifest.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "vendor.somc.hardware.aidlmiscta-somc.xml",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.somc.hardware.aidlmiscta-somc.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
 cc_prebuilt_binary {
     name: "adpl",
     owner: "sony",
@@ -30291,6 +31516,69 @@ cc_prebuilt_binary {
                 "libqmi_encdec",
                 "libqcmaputils",
                 "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "StoreKeybox",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/StoreKeybox",
+            ],
+            shared_libs: [
+                "liboemcrypto",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "TrustedUISampleTest",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/TrustedUISampleTest",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libdisplayconfig.qti",
+                "libqdutils",
+                "libhidlbase",
+                "libhidlmemory",
+                "libsi",
+                "libbase",
+                "vendor.display.config@1.3",
+                "vendor.qti.hardware.trustedui@1.0",
+                "vendor.qti.hardware.trustedui@1.1",
+                "vendor.qti.hardware.trustedui@1.2",
+                "android.hidl.allocator@1.0",
+                "libc++",
+                "libc",
                 "libm",
                 "libdl",
             ],
@@ -30534,6 +31822,33 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "hvdcp_opti",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hvdcp_opti",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "android.hardware.biometrics.fingerprint@2.1-service-rbs",
     owner: "sony",
     target: {
@@ -30688,6 +32003,74 @@ cc_prebuilt_binary {
                 "android.hardware.gnss@1.1",
                 "android.hardware.gnss@2.0",
                 "android.hardware.gnss@2.1",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.keymaster@4.0-service-qti",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-service-qti",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libbase",
+                "libutils",
+                "libhardware",
+                "libhidlbase",
+                "android.hardware.keymaster@4.0",
+                "libqtikeymaster4",
+                "libcrypto",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.keymaster@4.0-strongbox-service-qti",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libbase",
+                "libutils",
+                "libhardware",
+                "libhidlbase",
+                "android.hardware.keymaster@4.0",
+                "libqtikeymaster4",
+                "libcrypto",
                 "libc++",
                 "libc",
                 "libm",
@@ -31134,6 +32517,43 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "vendor.qti.hardware.trustedui@1.0-service-qti",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/vendor.qti.hardware.trustedui@1.0-service-qti",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libbase",
+                "libutils",
+                "libhardware",
+                "libhidlbase",
+                "vendor.qti.hardware.trustedui@1.0",
+                "vendor.qti.hardware.trustedui@1.1",
+                "vendor.qti.hardware.trustedui@1.2",
+                "vendor.qti.hardware.systemhelper@1.0",
+                "libTrustedUI",
+                "libTrustedInput",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "vendor.qti.hardware.tui_comm@1.0-service-qti",
     owner: "sony",
     target: {
@@ -31278,6 +32698,37 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "vendor.semc.hardware.ifaa@1.0-service",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/vendor.semc.hardware.ifaa@1.0-service",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libhidlbase",
+                "libion",
+                "libifaa",
+                "vendor.somc.hardware.ifaa@1.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "vendor.semc.hardware.secd@1.1-service",
     owner: "sony",
     target: {
@@ -31300,6 +32751,39 @@ cc_prebuilt_binary {
                 "libhardware",
                 "vendor.qti.hardware.soter@1.0",
                 "libifaa",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "vendor.semc.hardware.spc-service",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/vendor.semc.hardware.spc-service",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libbase",
+                "libbinder_ndk",
+                "libmiscta",
+                "libcutils",
+                "libdevice_security_vendor",
+                "vendor.semc.hardware.spc-V1-ndk_platform",
                 "libc++",
                 "libc",
                 "libm",
@@ -31471,6 +32955,35 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "idd-logreader",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/idd-logreader",
+            ],
+            shared_libs: [
+                "libidd",
+                "libprotobuf-c-idd",
+                "libutils",
+                "liblog",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "iddd",
     owner: "sony",
     target: {
@@ -31560,6 +33073,8 @@ cc_prebuilt_binary {
                 "libcutils",
                 "libutils",
                 "lib-imscommon",
+                "vendor.qti.ims.factory@2.0",
+                "vendor.qti.ims.factory@2.1",
                 "libc++",
                 "libc",
                 "libm",
@@ -31959,6 +33474,45 @@ cc_prebuilt_binary {
                 "libqti_vndfwk_detect",
                 "libcneapiclient",
                 "libbinder",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "mutualex",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/mutualex",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libdiag",
+                "libnetutils",
+                "libutils",
+                "libhardware_legacy",
+                "libqmiservices",
+                "libqmi_cci",
+                "libnl",
+                "libidl",
+                "libandroid_net",
+                "libhidlbase",
+                "libwpa_client",
+                "android.hardware.wifi.hostapd@1.0",
+                "android.hardware.wifi.supplicant@1.0",
                 "libc++",
                 "libc",
                 "libm",
@@ -32511,6 +34065,44 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "ssgtzd",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/ssgtzd",
+            ],
+            shared_libs: [
+                "libqcbor",
+                "libminksocket",
+                "libminkdescriptor",
+                "liblog",
+                "libjsoncpp",
+                "libcutils",
+                "libQSEEComAPI",
+                "libcurl",
+                "libqmi",
+                "libqmi_common_so",
+                "libqmi_csi",
+                "libqmi_cci",
+                "libdsi_netctrl",
+                "libcrypto",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "ssr_setup",
     owner: "sony",
     target: {
@@ -32695,6 +34287,36 @@ cc_prebuilt_binary {
                 "libcutils",
                 "libqmi_cci",
                 "libqmi_common_so",
+                "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "vendor.qti.hardware.soter@1.0-provision",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/vendor.qti.hardware.soter@1.0-provision",
+            ],
+            shared_libs: [
+                "libc",
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libhardware",
+                "libhidlbase",
+                "vendor.qti.hardware.soter@1.0",
                 "libc++",
                 "libm",
                 "libdl",
@@ -32991,6 +34613,7 @@ cc_prebuilt_binary {
             ],
             shared_libs: [
                 "libbinder",
+                "libbinder_ndk",
                 "libcutils",
                 "libutils",
                 "libhidlbase",
@@ -32998,6 +34621,7 @@ cc_prebuilt_binary {
                 "libhardware_legacy",
                 "liblog",
                 "vendor.qti.hardware.dpmservice@1.0",
+                "vendor.qti.hardware.dpmaidlservice-V1-ndk",
                 "libavservices_minijail",
                 "libc++",
                 "libc",
@@ -33012,6 +34636,34 @@ cc_prebuilt_binary {
     },
     prefer: true,
     system_ext_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "taimport_vendor",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/bin/taimport_vendor",
+            ],
+            shared_libs: [
+                "libta",
+                "liblog",
+                "libcutils",
+                "libmiscta",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    device_specific: true,
 }
 
 cc_prebuilt_binary {
@@ -33048,31 +34700,18 @@ cc_prebuilt_binary {
     system_ext_specific: true,
 }
 
-cc_prebuilt_binary {
-    name: "sony_ext_uim_ctrl",
-    owner: "sony",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/bin/sony_ext_uim_ctrl",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libmiscta",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    device_specific: true,
+install_symlink {
+    name: "system_ext_priv-app_ims_lib_arm64_libimscamera_jni_so",
+    system_ext_specific: true,
+    installed_location: "priv-app/ims/lib/arm64/libimscamera_jni.so",
+    symlink_target: "/system_ext/lib64/libimscamera_jni.so",
+}
+
+install_symlink {
+    name: "system_ext_priv-app_ims_lib_arm64_libimsmedia_jni_so",
+    system_ext_specific: true,
+    installed_location: "priv-app/ims/lib/arm64/libimsmedia_jni.so",
+    symlink_target: "/system_ext/lib64/libimsmedia_jni.so",
 }
 
 install_symlink {
